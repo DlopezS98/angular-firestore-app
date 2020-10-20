@@ -1,0 +1,42 @@
+warning: LF will be replaced by CRLF in angular.json.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in src/environments/environment.ts.
+The file will have its original line endings in your working directory
+[1mdiff --git a/angular.json b/angular.json[m
+[1mindex 15bb7f4..08aed50 100644[m
+[1m--- a/angular.json[m
+[1m+++ b/angular.json[m
+[36m@@ -117,6 +117,10 @@[m
+               "devServerTarget": "angular-firestore-app:serve:production"[m
+             }[m
+           }[m
+[32m+[m[32m        },[m
+[32m+[m[32m        "deploy": {[m
+[32m+[m[32m          "builder": "@angular/fire:deploy",[m
+[32m+[m[32m          "options": {}[m
+         }[m
+       }[m
+     }[m
+[1mdiff --git a/src/environments/environment.ts b/src/environments/environment.ts[m
+[1mindex 7b4f817..199a9ab 100644[m
+[1m--- a/src/environments/environment.ts[m
+[1m+++ b/src/environments/environment.ts[m
+[36m@@ -3,7 +3,17 @@[m
+ // The list of file replacements can be found in `angular.json`.[m
+ [m
+ export const environment = {[m
+[31m-  production: false[m
+[32m+[m[32m  production: false,[m
+[32m+[m[32m  firebase:{[m
+[32m+[m[32m    apiKey: "AIzaSyB16_3M3fBtMVW2U4ovTEUOIAMsjIdqn0g",[m
+[32m+[m[32m    authDomain: "angular-firestore-products.firebaseapp.com",[m
+[32m+[m[32m    databaseURL: "https://angular-firestore-products.firebaseio.com",[m
+[32m+[m[32m    projectId: "angular-firestore-products",[m
+[32m+[m[32m    storageBucket: "angular-firestore-products.appspot.com",[m
+[32m+[m[32m    messagingSenderId: "294888903507",[m
+[32m+[m[32m    appId: "1:294888903507:web:5d49bcc908d85f174707a6",[m
+[32m+[m[32m    measurementId: "G-MW1MCNBFTR"[m
+[32m+[m[32m  }[m
+ };[m
+ [m
+ /*[m

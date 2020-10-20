@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "angular-firestore-products": {
+      "hosting": {
+        "angular-firestore-app": [
+          "angular-firestore-products"
+        ]
+      }
+    }
+  }
+}
