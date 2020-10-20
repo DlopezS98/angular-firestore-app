@@ -1,9 +1,64 @@
-<ul>
-    <li *ngFor="let prod of products">
-        {{prod.name}} <br />
-        {{prod.description}} <br />
-        {{prod.price}}
+<div *ngIf="products.length > 0; else emptyProducts">
+  <ul class="list-group">
+    <li
+      class="list-group-item list-group-item-action"
+      *ngFor="let prod of products"
+    >
+      <h3>{{ prod.name }}</h3>
+      <p>{{ prod.description }}</p>
+      <h5>${{ prod.price }}</h5>
+      <div class="">
+        <button class="btn btn-danger" (click)="DeleteProduct($event, prod)">
+          Delete
+        </button>
+        <button
+          class="btn btn-primary ml-4"
+          (click)="EditProduct($event, prod)"
+        >
+          Edit
+        </button>
+      </div>
+      <div class="my-4" *ngIf="editing && editingProduct.id == prod.id">
+        <form (ngSubmit)="UpdatedProduct()">
+          <div class="form-group">
+            <input
+              class="form-control"
+              placeholder="Product Name"
+              type="text"
+              name="name"
+              [(ngModel)]="editingProduct.name"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              class="form-control"
+              type="text"
+              name="description"
+              placeholder="Description"
+              [(ngModel)]="editingProduct.description"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              class="form-control"
+              placeholder="Price"
+              type="number"
+              name="price"
+              [(ngModel)]="editingProduct.price"
+              step="0.01"
+            />
+          </div>
+          <div class="form-group">
+            <button class="btn btn-success btn-block" type="submit">
+              Update
+            </button>
+          </div>
+        </form>
+      </div>
     </li>
+  </ul>
+</div>
 
-
-</ul>
+<ng-template class="text-center" #emptyProducts>
+  <h4>No hay productos actualmente</h4>
+</ng-template>

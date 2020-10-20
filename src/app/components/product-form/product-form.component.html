@@ -1,1 +1,38 @@
-<p>product-form works!</p>
+<div class="card">
+  <div class="card-header">
+    <h3 class="text-center">Products</h3>
+  </div>
+  <form class="card-body" (ngSubmit)="createProduct()">
+    <div class="form-group">
+      <input
+        class="form-control"
+        placeholder="Product Name"
+        type="text"
+        name="name"
+        [(ngModel)]="product.name"
+      />
+    </div>
+    <div class="form-group">
+      <input
+        class="form-control"
+        placeholder="Description"
+        type="text"
+        name="description"
+        [(ngModel)]="product.description"
+      />
+    </div>
+    <div class="form-group">
+      <input
+        class="form-control"
+        placeholder="Price"
+        type="number"
+        name="price"
+        [(ngModel)]="product.price"
+        step="0.01"
+      />
+    </div>
+    <div class="form-group">
+      <button class="btn btn-primary btn-block" type="submit">Save</button>
+    </div>
+  </form>
+</div>
