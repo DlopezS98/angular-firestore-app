@@ -4,16 +4,16 @@
 
 export const environment = {
   production: false,
-  firebase:{
-    apiKey: "AIzaSyB16_3M3fBtMVW2U4ovTEUOIAMsjIdqn0g",
-    authDomain: "angular-firestore-products.firebaseapp.com",
-    databaseURL: "https://angular-firestore-products.firebaseio.com",
-    projectId: "angular-firestore-products",
-    storageBucket: "angular-firestore-products.appspot.com",
-    messagingSenderId: "294888903507",
-    appId: "1:294888903507:web:5d49bcc908d85f174707a6",
-    measurementId: "G-MW1MCNBFTR"
-  }
+  firebase: {
+    apiKey: '<your api ke>',
+    authDomain: '<your-project-authdomain>',
+    databaseURL: '<your-database-URL>',
+    projectId: '<your-project-id>',
+    storageBucket: '<your-storage-bucket>',
+    messagingSenderId: '<your-messaging-sender-id>',
+    appId: '<your app id>',
+    measurementId: '<your measurement id>',
+  },
 };
 
 /*
