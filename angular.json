@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-firestore-app"
+    }
+  },
+  "defaultProject": "angular-firestore-app",
+  "cli": {
+    "analytics": true
+  }
 }
